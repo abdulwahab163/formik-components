@@ -29,7 +29,7 @@ function FormikContainer() {
     birthDate: null,
   };
   const validationSchema = Yup.object({
-    email: Yup.string().required("Required!"),
+    email: Yup.string().email("invalid email format").required("Required!"),
     description: Yup.string().required("Required!"),
     selectOption: Yup.string().required("Required!"),
     radioOption: Yup.string().required("Required!"),
